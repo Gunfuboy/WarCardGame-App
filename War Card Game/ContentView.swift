@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    var playerCard = "back"
-    var dealerCard = "back"
+    @State private var playerCard = "back"
+    @State private var dealerCard = "back"
     
-    var playerScore = 0
-    var dealerScore = 0
+    @State private var playerScore = 0
+    @State private var dealerScore = 0
     
     var body: some View {
         
@@ -67,7 +67,19 @@ struct ContentView: View {
     }
     
     func deal(){
-        print("Dealed cards")
+        let newPlayerCard = Int.random(in: 2..<8)
+        let newDealerCard = Int.random(in: 2..<8)
+        playerCard = "card" + String(newPlayerCard)
+        dealerCard = "card" + String(newDealerCard)
+        calculateScore(PlayerNumber: newPlayerCard, DealerNumber: newDealerCard)
+    }
+    
+    func calculateScore( PlayerNumber x: Int, DealerNumber y: Int) {
+        if (x > y) {
+            playerScore += 1
+        }else if (y>x){
+            dealerScore += 1
+        }
     }
 }
 
