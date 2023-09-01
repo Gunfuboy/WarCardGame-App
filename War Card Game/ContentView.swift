@@ -51,7 +51,7 @@ struct ContentView: View {
                     }
                     Spacer()
                     VStack{
-                        Text("CPU")
+                        Text("Dealer")
                             .font(.headline)
                             .padding(.bottom, 10.0)
                         Text(String(dealerScore))
@@ -81,6 +81,7 @@ struct ContentView: View {
             dealerScore += 1
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
