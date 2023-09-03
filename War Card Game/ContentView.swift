@@ -14,14 +14,42 @@ struct ContentView: View {
     @State private var playerScore = 0
     @State private var dealerScore = 0
     
+
+    
+    @State private var background: Image = Image("background-plain")
+    
     var body: some View {
-        
         ZStack{
-            Image("background-plain")
+
+            background
                 .resizable()
                 .ignoresSafeArea()
             
+
             VStack {
+                
+                HStack{
+                    
+                    Spacer()
+                    Button
+                    {changeBackground()}
+                    label:
+                    {Text("Background")
+                        .fontWeight(.semibold)
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 10)
+                        .cornerRadius(10)
+                        .background(Color(red: 0.945, green: 0.393, blue: 0.324))
+                        .foregroundColor(Color(red: 0.995, green: 0.935, blue: 0.784))
+                    }
+                    .border(/*@START_MENU_TOKEN@*/Color(red: 0.995, green: 0.935, blue: 0.784)/*@END_MENU_TOKEN@*/, width: 4)
+                    .cornerRadius(10)
+                    .padding([.bottom, .trailing], 15.0)
+                    .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.roundedRectangle/*@END_MENU_TOKEN@*/)
+                
+                }
+                
+                
                 Image("logo")
                     .padding(.bottom, 20.0)
                 HStack{
@@ -82,6 +110,18 @@ struct ContentView: View {
         }
     }
     
+    
+    func changeBackground(){
+        if background == Image("background-plain"){
+            background = Image("background-cloth")
+        }else if background == Image("background-cloth"){
+            background = Image("background-wood-cartoon")
+        }else if background == Image("background-wood-cartoon"){
+            background = Image("background-wood-grain")
+        }else {
+            background = Image("background-plain")
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
