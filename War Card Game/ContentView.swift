@@ -94,7 +94,7 @@ struct ContentView: View {
                     {deal()}
                         label: {Image("button")}
 
-
+                    
                     HStack{
                         Spacer()
                         VStack(alignment: .center){
