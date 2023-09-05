@@ -25,38 +25,58 @@ struct RulesPopUp: View {
                         Image(systemName: "xmark")
                     }
                     .padding([.top, .trailing])
+                    .controlSize(.large)
                 }
-                
-                Text("Rules")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-               Spacer()
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.top)
                     .frame(width: 200, height: 200)
-                Spacer()
+                
                 VStack{
-                    HStack{
-                        Text("Press")
-                        Image("button")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width:80)
-                        Text("to deal the cards.")
-                    }
-                    .font(.body)
-                    .multilineTextAlignment(.leading)
-                    .dynamicTypeSize(/*@START_MENU_TOKEN@*/.xxxLarge/*@END_MENU_TOKEN@*/)
-                    Spacer()
-                        .frame(height: 10.0)
-                    Text("If your card number is higher than the dealer's, you win 1 point, if the dealer's card is higher, they win 1 point.")
+                    
+                    Text("Rules")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.top, 20.0)
+                    
+                    VStack{
+                        Spacer()
+                        HStack{
+                            Text("Press")
+                            Image("button")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:80)
+                            Text("to deal the cards.")
+                        }
                         .font(.body)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 11.0)
+                        .multilineTextAlignment(.leading)
                         .dynamicTypeSize(/*@START_MENU_TOKEN@*/.xxxLarge/*@END_MENU_TOKEN@*/)
-                    Spacer()
-                        .frame(height: 10.0)
+                        Spacer()
+                            .frame(height: 10.0)
+                        Text("If your card number is higher than the dealer's, you win 1 point, if the dealer's card is higher, they win 1 point.")
+                            .font(.body)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 11.0)
+                            .dynamicTypeSize(/*@START_MENU_TOKEN@*/.xxxLarge/*@END_MENU_TOKEN@*/)
+                        Spacer()
+                        
+                    }
+                    
+                    VStack{
+                        Spacer()
+                        Text("All assets and app idea credits to @CodeWithChris on Youtube.")
+                            .multilineTextAlignment(.center)
+                        
+                        Text("App created by Andrew Wei (@Gunfuboy)")
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                            .padding(.top, 10.0)
+                            
+                        
+                    }
+                    .padding(/*@START_MENU_TOKEN@*/.all, 5.0/*@END_MENU_TOKEN@*/)
                 }
                 
                 Spacer()

@@ -33,7 +33,7 @@ struct ContentView: View {
                             RulesPopUp().navigationBarBackButtonHidden(true)
                         }
                         label: {
-                            Text("Rules")
+                            Text("Info")
                                 .fontWeight(.semibold)
                                 .padding(.horizontal, 37.0)
                                 .padding(.vertical, 10)
