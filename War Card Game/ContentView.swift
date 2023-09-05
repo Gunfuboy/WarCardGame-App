@@ -18,80 +18,109 @@ struct ContentView: View {
     
     @State private var background: Image = Image("background-plain")
     
+    
     var body: some View {
-        ZStack{
-
-            background
-                .resizable()
-                .ignoresSafeArea()
+        NavigationStack{
             
-
-            VStack {
+            ZStack{
+                background
+                    .resizable()
+                    .ignoresSafeArea()
                 
-                HStack{
-                    
-                    Spacer()
-                    Button
-                    {changeBackground()}
-                    label:
-                    {Text("Background")
-                        .fontWeight(.semibold)
-                        .padding(.horizontal, 15)
-                        .padding(.vertical, 10)
+                VStack {
+                    HStack{
+                        NavigationLink {
+                            RulesPopUp().navigationBarBackButtonHidden(true)
+                        }
+                        label: {
+                            Text("Rules")
+                                .fontWeight(.semibold)
+                                .padding(.horizontal, 37.0)
+                                .padding(.vertical, 10)
+                                .cornerRadius(10)
+                                .background(Color(red: 0.945, green: 0.393, blue: 0.324))
+                                .foregroundColor(Color(red: 0.995, green: 0.935, blue: 0.784))
+                        }
+                        .border(/*@START_MENU_TOKEN@*/Color(red: 0.995, green: 0.935, blue: 0.784)/*@END_MENU_TOKEN@*/, width: 4)
                         .cornerRadius(10)
-                        .background(Color(red: 0.945, green: 0.393, blue: 0.324))
-                        .foregroundColor(Color(red: 0.995, green: 0.935, blue: 0.784))
+                        .padding([.leading, .bottom], 10.0)
+                        .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.roundedRectangle/*@END_MENU_TOKEN@*/)
+                        
+
+                        
+                        Spacer()
+                        
+                        Button
+                        {changeBackground()}
+                        label:
+                        {Text("Background")
+                            .fontWeight(.semibold)
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 10)
+                            .cornerRadius(10)
+                            .background(Color(red: 0.945, green: 0.393, blue: 0.324))
+                            .foregroundColor(Color(red: 0.995, green: 0.935, blue: 0.784))
+                        }
+                        .border(/*@START_MENU_TOKEN@*/Color(red: 0.995, green: 0.935, blue: 0.784)/*@END_MENU_TOKEN@*/, width: 4)
+                        .cornerRadius(10)
+                        .padding([.bottom, .trailing], 10.0)
+                        .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.roundedRectangle/*@END_MENU_TOKEN@*/)
                     }
-                    .border(/*@START_MENU_TOKEN@*/Color(red: 0.995, green: 0.935, blue: 0.784)/*@END_MENU_TOKEN@*/, width: 4)
-                    .cornerRadius(10)
-                    .padding([.bottom, .trailing], 15.0)
-                    .buttonBorderShape(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=shape: ButtonBorderShape@*/.roundedRectangle/*@END_MENU_TOKEN@*/)
-                
-                }
-                
-                
-                Image("logo")
-                    .padding(.bottom, 20.0)
-                HStack{
-                    Spacer()
-                    Image(playerCard)
-                    Spacer()
-                    Image(dealerCard)
-                    Spacer()
-                }
-                
-                .padding(.vertical, 20.0)
-                
-                Button
-                {deal()}
-                    label: {Image("button")}
+                    
+                    
+                    Image("logo")
+                        .padding(.bottom, 20.0)
+                    HStack{
+                        Spacer()
+                        VStack{
+                            Text("Player")
+                                
+                            Image(playerCard)
+                        }
+                        
+                        Spacer()
+                        VStack{
+                            Text("Dealer")
+                            Image(dealerCard)
+                        }
+                        Spacer()
+                    }
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .padding(.vertical, 20.0)
+                    
+                    Button
+                    {deal()}
+                        label: {Image("button")}
 
 
-                HStack{
-                    Spacer()
-                    VStack(alignment: .center){
-                        Text("Player")
-                            .font(.headline)
-                            .padding(.bottom, 10.0)
-                        Text(String(playerScore))
-                            .font(.largeTitle)
-                            
+                    HStack{
+                        Spacer()
+                        VStack(alignment: .center){
+                            Text("Player")
+                                .font(.headline)
+                                .padding(.bottom, 10.0)
+                            Text(String(playerScore))
+                                .font(.largeTitle)
+                                
+                        }
+                        Spacer()
+                        VStack{
+                            Text("Dealer")
+                                .font(.headline)
+                                .padding(.bottom, 10.0)
+                            Text(String(dealerScore))
+                                .font(.largeTitle)
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                    VStack{
-                        Text("Dealer")
-                            .font(.headline)
-                            .padding(.bottom, 10.0)
-                        Text(String(dealerScore))
-                            .font(.largeTitle)
-                    }
-                    Spacer()
+                    .padding(20.0)
+                    .foregroundColor(Color.white)
                 }
-                .padding(20.0)
-                .foregroundColor(Color.white)
             }
         }
-
+        
     }
     
     func deal(){
@@ -123,6 +152,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

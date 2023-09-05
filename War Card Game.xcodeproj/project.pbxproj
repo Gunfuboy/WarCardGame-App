@@ -11,6 +11,7 @@
 		E41F70D82A9D1D150077FAE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41F70D72A9D1D150077FAE8 /* ContentView.swift */; };
 		E41F70DA2A9D1D170077FAE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41F70D92A9D1D170077FAE8 /* Assets.xcassets */; };
 		E41F70DD2A9D1D170077FAE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41F70DC2A9D1D170077FAE8 /* Preview Assets.xcassets */; };
+		E4963CB72AA51D220039ED00 /* RulesPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4963CB62AA51D220039ED00 /* RulesPopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E41F70D72A9D1D150077FAE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E41F70D92A9D1D170077FAE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E41F70DC2A9D1D170077FAE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4963CB62AA51D220039ED00 /* RulesPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesPopUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E41F70D52A9D1D150077FAE8 /* War_Card_GameApp.swift */,
 				E41F70D72A9D1D150077FAE8 /* ContentView.swift */,
+				E4963CB62AA51D220039ED00 /* RulesPopUp.swift */,
 				E41F70D92A9D1D170077FAE8 /* Assets.xcassets */,
 				E41F70DB2A9D1D170077FAE8 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4963CB72AA51D220039ED00 /* RulesPopUp.swift in Sources */,
 				E41F70D82A9D1D150077FAE8 /* ContentView.swift in Sources */,
 				E41F70D62A9D1D150077FAE8 /* War_Card_GameApp.swift in Sources */,
 			);
