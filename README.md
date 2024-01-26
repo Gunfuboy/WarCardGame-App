@@ -1,5 +1,7 @@
 # A War Card Game App 
-A simple War card game app on IOS. App idea and assets are credits to @CodeWithChris on YouTube.
+A simple War card game app on IOS. 
+
+The rule of the game is simple: you win when you draw a card that is higher than your opponent (the Dealer).
 
 <p align ="center">
     <img src="Photos/Main_Page.png" width = "50%" height = "50%">
@@ -38,3 +40,6 @@ To test the functionality of the apps:
 1. Open XCode
 2. Create a new folder and clone repo
 3. Run with builder and interact with the simulator
+
+## Acknowledgement
+App idea and assets are credits to @CodeWithChris on YouTube.
